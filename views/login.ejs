@@ -1,0 +1,17 @@
+<%- include('parts/header') %> 
+<%- include('parts/navbar')%>
+
+ 
+ <h3 style="text-align: center; margin-top:30px;font-family:Bold 700;margin-bottom:30px">Login</h3>
+ <form action="/login" method="POST"  style="border:6px solid #4b5a68 ; width: 46%; margin: 30px;border-radius: 15px; margin-left: 390px;background-color: #808386;padding-left: 30px;">
+     <input type="email" required class="form-control" name="email" placeholder="E-mail" style="width:70% ;margin:30px;margin-left: 70px;">
+     <input type="password" required class="form-control" name="password" placeholder="Password" style="width:70% ;margin:30px;margin-left: 70px;">
+    
+     <button type="submit" class="btn btn-primary" style="background-color: rgb(65, 67, 69); border:#212529; margin-left: 250px;  width: 150px;">Login</button>
+      <div style=" margin-left: 230px;">
+      <p>Already have account? <a style="text-decoration: none; color: rgb(24, 3, 143);" href="/signup">Signup</a></p>
+      </div>
+    
+ </form>
+
+<%- include('parts/footer')%> 

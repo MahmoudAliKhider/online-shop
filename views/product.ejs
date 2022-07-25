@@ -1,0 +1,32 @@
+<%- include('parts/header') %> 
+<%- include('parts/navbar')%>
+
+<div class="container" >
+ <% if(!product){ %>
+  <div class="alert alert-danger">
+    there is no products matches this id
+  </div>
+  <% }else{ %>
+    <div class="col" style="  margin-top: 30px; border: 3px solid #212529 ;border-radius: 12px; display: flex;background-color: #212529;color: #fff; ">
+      <div class="col col-12 col-md-6">
+          <img src="/<%= product.image %>" style="width:60% ; height:70%;" >
+  
+          <form action="/cart" method="POST" style="margin-top:10px ;">
+              <input type="number" name="amount" class="form-control" style="width: 50%; margin-left:10%">
+              <button type="submit" class="btn btn-primary" style="background-color: rgb(118, 126, 134); border:#212529; margin-top:9px;width: 50%; margin-left:10%">Add Cart</button>
+  
+          </form>
+  
+      </div>
+      <div class="col col-12 col-md-6" >
+          <h3 style="margin-bottom: 30px;"><%= product.name %> </h3>
+          <h3 style="margin-bottom: 30px;">Price:<%= product.price %> </h3>
+          <h3 style="margin-bottom: 30px;"><%= product.description %> </h3>
+  
+      </div>
+  
+    </div>
+    <% } %>   
+</div>
+
+<%- include('parts/footer')%> 
